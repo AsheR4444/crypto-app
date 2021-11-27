@@ -14,8 +14,8 @@ import { Footer } from '~/components/Footer'
 
 export const App = () => (
     <div className="app">
-        <Navbar />
         <div className="main">
+            <Navbar />
             <Layout>
                 <div className="routes">
                     <Routes>
