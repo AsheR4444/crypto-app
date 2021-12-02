@@ -2,17 +2,14 @@
 import type { FC, ChangeEvent } from 'react'
 import React, { useState, useEffect } from 'react'
 import millify from 'millify'
-
+import { Link } from 'react-router-dom'
 import {
     Typography, Row, Col, Card, Input,
 } from 'antd'
-import { Link } from 'react-router-dom'
 
-import { useGetCryptosQuery } from '~/services/cryptoApi'
+import { useGetCryptosQuery } from '~/services'
 
-type CryptocurrenciesProps = {
-    simplified?: boolean
-}
+type CryptocurrenciesProps = { simplified?: boolean }
 
 export const Cryptocurrencies:FC<CryptocurrenciesProps> = ({ simplified }) => {
     const count = simplified ? 10 : 100
